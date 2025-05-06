@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Importación de fuente desde Google Fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+    </style>
+    <!-- Configuración de codificación y vista responsiva -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamagotchi Virtual</title>
+    <!-- Enlace a la hoja de estilos externa -->
+    <link rel="stylesheet" href="ternurino.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Pantalla 1: Bienvenida al usuario -->
+        <div class="screen active" id="screen1">
+            <h1>¡Bienvenido!</h1>
+            <p>Hola, hoy estás aquí para adoptar a un nuevo amigo. ¿Estás emocionado?</p>
+            <div class="buttons">
+                <!-- Botón para aceptar -->
+                <button class="pixel-btn" id="yes-btn">SÍ</button>
+                <!-- Botón para más información -->
+                <button class="secondary pixel-btn" id="what-btn">¿QUÉ ES ESTO?</button>
+            </div>
+        </div>
+
+        <!-- Pantalla 1.5: Selección de personalidad de la mascota -->
+        <div class="screen" id="screen1-5">
+            <h1>Elige su personalidad</h1>
+            <p>No te preocupes, es muy sencillo. Primero vas a escoger la personalidad de la mascota que quieres adoptar:</p>
+            <div class="pet-selection">
+                <!-- Opción de personalidad alegre -->
+                <div class="pet-option" data-type="normal">
+                    <img src="assets/sprites/gatonormal.gif" class="pet-preview">
+                    <p>Alegre</p>
+                </div>
+                <!-- Opción de personalidad enérgica -->
+                <div class="pet-option" data-type="yellow">
+                    <img src="assets/sprites/gatonormal.gif" class="pet-preview yellow-filter">
+                    <p>Enérgico</p>
+                </div>
+                <!-- Opción de personalidad tranquila -->
+                <div class="pet-option" data-type="blue">
+                    <img src="assets/sprites/gatonormal.gif" class="pet-preview blue-filter">
+                    <p>Tranquilo</p>
+                </div>
+            </div>
+            <!-- Vista previa ampliada de la mascota seleccionada -->
+            <div class="pet-preview-large-container">
+                <img src="assets/sprites/gatonormal.gif" id="pet-preview-large" class="pet-preview-large normal-filter">
+                <p>Vista previa</p>
+            </div>
+            <!-- Botón para continuar al siguiente paso -->
+            <button class="pixel-btn" id="next-to-name-btn">SIGUIENTE</button>
+        </div>
+
+        <!-- Pantalla 2: Asignación de nombre a la mascota -->
+        <div class="screen" id="screen2">
+            <h1>Elige un nombre</h1>
+            <p id="screen2-text">Perfecto, ahora necesitamos un nombre para tu nueva mascota.</p>
+            <!-- Campo de texto para ingresar el nombre -->
+            <input class="pixel-btn" type="text" id="pet-name" placeholder="Nombre de tu mascota" maxlength="12">
+            <!-- Botón para continuar -->
+            <button class="pixel-btn" id="name-next-btn">SIGUIENTE</button>
+        </div>
+
+        <!-- Pantalla 3: Presentación de la mascota -->
+        <div class="screen" id="screen3">
+            <h1>¡Comencemos!</h1>
+            <p>Creo que le ha encantado. Tu misión a partir de ahora será cuidarlo.</p>
+            <div class="pet-container">
+                <!-- Imagen animada de la mascota -->
+                <img src="assets/sprites/tma.gif" id="pet-image" class="pet-gif normal-filter" alt="Mascota">
+            </div>
+            <!-- Botón para empezar el juego -->
+            <button class="pixel-btn" id="start-game-btn">SIGUIENTE</button>
+        </div>
+
+        <!-- Pantalla 4: Interfaz principal del cuidado de la mascota -->
+        <div class="screen" id="screen4">
+            <!-- Nombre de la mascota -->
+            <h1 id="pet-name-display">Mascota</h1>
+            <div class="pet-container">
+                <!-- Cara de la mascota -->
+                <img src="assets/sprites/gatonormal.gif" id="pet-face" class="pet-gif normal-filter" alt="Mascota">
+                <!-- Estado de ánimo de la mascota -->
+                <div class="mood" id="pet-mood"></div>
+            </div>
+            <!-- Sección de estadísticas: hambre, felicidad y limpieza -->
+            <div class="stats">
+                <div class="stat hunger">
+                    <span>Hambre</span>
+                    <div class="stat-bar">
+                        <div class="stat-fill" id="hunger-bar"></div>
+                    </div>
+                </div>
+                <div class="stat happiness">
+                    <span>Felicidad</span>
+                    <div class="stat-bar">
+                        <div class="stat-fill" id="happiness-bar"></div>
+                    </div>
+                </div>
+                <div class="stat energy">
+                    <span>Limpieza</span>
+                    <div class="stat-bar">
+                        <div class="stat-fill" id="energy-bar"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Botones de acción para interactuar con la mascota -->
+            <div class="actions">
+                <button class="action-btn" id="feed-btn">🍗</button>
+                <button class="action-btn" id="play-btn">🎾</button>
+                <button class="action-btn" id="clean-btn">🛁</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Inclusión del archivo JavaScript que controla la lógica del juego -->
+    <script src="ternurino.js"></script>
+</body>
+</html>
