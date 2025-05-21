@@ -44,9 +44,9 @@ Nada complicado:
 ## 🐥 Cositas lindas que tengo
 
 ✨ Estilo retro pixelado (como en los 2000)  
-📱 Se adapta a pantallas pequeñas (para jugar desde tu celu también)  
+📱 Se adapta a pantallas pequeñas (para jugar desde tu movil también)  
 💬 Mensajes tiernos que cambian según cómo me trates  
-🎨 Código super comentado por si querés aprender a programar conmigo 🧠
+🎨 Código super comentado por si quieres aprender a programar conmigo 🧠
 
 ---
 
@@ -65,8 +65,8 @@ Fui creado con amor por:
 ## 🐾 ¿Puedo compartirlo?
 
 ¡Síiii!  
-Podés jugar, editarme, mejorarme o regalarme a tus amig@s.  
-Solo recordá mencionar a mis papis humanos 🐣💕
+Puedes jugar, editarme, mejorarme o regalarme a tus amig@s.  
+Solo recuerda mencionar a mis papis humanos 🐣💕
 
 ---
 
